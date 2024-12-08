@@ -1,0 +1,184 @@
+.nav-barra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; 
+    .nav-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .nav-toggle{
+        display:none;
+    }
+    .barra__toggle{
+        display:none;
+        font-size:11.5rem;
+        cursor:pointer;
+        color:$color-white;
+    }    
+    .nav-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }     
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 100px;
+        flex: 1;
+        justify-content: center; 
+        li a {
+            text-decoration:none;
+            color:$color-white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            &:hover {
+                color: $color-white-transparente;
+            }
+        }  
+    }                  
+    .nav-extras {
+        display: flex;
+        align-items: center;
+        gap: 15px;    
+        .nav-search {
+            display: flex;
+            align-items: center;
+            gap: 10px; 
+            .nav-input {
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+            .nav-btn {
+                background-color: transparent;
+                color: $color-white;
+                border: 1px solid $color-white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-negro;
+                }
+            }  
+        }           
+        .nav-icon {
+            color: $color-white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            &:hover {
+                color: $color-white-transparente;
+            }
+        }
+    }
+}   
+
+
+
+@media (max-width: 960px) {
+    .barra__toggle {
+        display: block; 
+    }
+    .nav-content {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .nav-toggle:checked + .barra__toggle + .nav-links,
+    .nav-toggle:checked + .barra__toggle + .nav-links + .nav-extras {
+        display: flex;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    
+        li {
+            width: 100%;
+    
+            a {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+                text-align: left;
+                color: $color-white;
+                font-size: 1rem;
+    
+                &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+    .nav-extras {
+        flex-direction: column;
+        width: 100%;
+    
+        .nav-search {
+            width: 100%;
+            display:flex;
+            .nav-input {
+                flex: 1;
+                padding: 10px;
+            }
+            .nav-btn {
+                margin-left: 10px;
+                padding: 10px;
+            }           
+        }
+        .nav-icon {
+            display: block;
+            margin: 5px 0;
+            text-align: left;
+        }   
+    }
+}
+@media (min-width: 961px) {
+    .nav-content {
+        display: flex;
+    }
+    .nav-links {
+        display: flex;
+    } 
+    .nav-extras {
+        display: flex;
+    }
+    .barra__toggle {
+        display: none;
+    }
+}
+footer {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.content{
+    flex:1;
+}

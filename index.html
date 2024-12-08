@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+</head>
+<body class="index-body">
+    <nav class="barra">
+        <div class="barra__logo">LOGO</div>
+        <!-- Botón de menú hamburguesa para pantallas pequeñas -->
+        <button class="barra__toggle" aria-label="Abrir menú">
+            <span class="barra__toggle-line"></span>
+            <span class="barra__toggle-line"></span>
+            <span class="barra__toggle-line"></span>
+        </button>
+        <ul class="barra__links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="./pages/ofertas.html">Ofertas</a></li>
+            <li><a href="#sucursales">Sucursales</a></li>
+            <li><a href="./pages/sobrenosotros.html">Sobre Nosotros</a></li>
+        </ul>
+        <!-- Barra de búsqueda -->
+        <div class="navbar-search d-flex align-items-center ms-3">
+            <input type="text" class="form-control" placeholder="Buscar productos...">
+            <button class="btn btn-outline-light ms-2" type="button">Buscar</button>
+            <a href="#">❤️</a>
+            <a href="#">🛒</a>
+            <a href="./pages/loggin.html">👤</a>
+        </div>
+    </nav>
+    <!--carrousel-->
+    <div class="slider-wrapper">  
+        <div class="slider-frame">
+            <ul>
+                <li><img src="./imagenes/A_group_of_three_models_wearing_modern_and_stylish.png" alt="modelos-ropa-deportiva"></li>
+                <li><img src="./imagenes/Three_athletic_models_showcasing_trendy_sportswear (1).png" alt="modelos-ropa-deportiva"></li>
+                <li><img src="./imagenes/Three_models_wearing_vibrant_and_stylish_sportswea (1).png" alt="modelos-ropa-deportiva"></li>
+                <li><img src="" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+                                <!-- Barra lateral de filtros -->
+            <aside class="col-md-3">
+                <h5 class="mb-3">Filtrar por</h5>
+                <div class="filter-category mb-4">
+                    <h6>Categoría</h6>
+                    <div>
+                        <input type="checkbox" id="futbol" data-filter="futbol" class="filter-checkbox">
+                        <label for="futbol">Fútbol</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                        <label for="tenis">Paddel</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="deportivo" data-filter="deportivo" class="filter-checkbox">
+                        <label for="running">Deportivo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="vestir" data-filter="vestir" class="filter-checkbox">
+                        <label for="running">Vestir</label>
+                    </div>
+                    <h6>Club</h6>
+                    <div>
+                        <input type="checkbox" id="futbol" data-filter="futbol" class="filter-checkbox">
+                        <label for="running">San Lorenzo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="futbol" data-filter="futbol" class="filter-checkbox">
+                        <label for="running">Argentina</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="futbol" data-filter="futbol" class="filter-checkbox">
+                        <label for="running">River</label>
+                    </div>
+                    <h6 >Paddel</h6>
+                    <div>
+                        <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                        <label for="running">Paletas</label>
+                    </div>
+                    <h6>Talles</h6>
+                        <div>
+                        <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                        <label for="running">S</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">L</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">XL</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">XXL</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">XXXL</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">39</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">40</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">41</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">42</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="paddel" data-filter="paddel" class="filter-checkbox">
+                            <label for="running">43</label>
+                        </div>    
+
+                </div>
+                <button class="btn btn-primary w-100" id="apply-filters">Aplicar filtros</button>
+            </aside>
+
+            <!-- Tarjetas de Productos -->
+            
+            <section class="col-md-9">
+                <div class="row" id="product-container">
+                    <!-- Producto 1 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="futbol">
+                        <div class="card">
+                            <img src="./imagenes/botines1.jfif" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Botines</h5>
+                                <p class="card-text">Descripción breve de botin.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Producto 2 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="tenis">
+                        <div class="card">
+                            <img src="./imagenes/botines2.jfif" class="card-img-top" alt="Producto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Botines</h5>
+                                <p class="card-text">Descripción breve del botin.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Producto 3 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/botines3.jfif" class="card-img-top" alt="Producto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Botines</h5>
+                                <p class="card-text">Descripción breve del botin .</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                                    <!-- Producto 4 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/botines4.jfif" class="card-img-top" alt="Producto 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Botines</h5>
+                                <p class="card-text">Descripción breve del botin .</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 5 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="futbol">
+                        <div class="card">
+                            <img src="./imagenes/botines5.jfif" class="card-img-top" alt="Producto 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Botines</h5>
+                                <p class="card-text">Descripción breve del botin .</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="tenis">
+                        <div class="card">
+                            <img src="./imagenes/botines6.jfif" class="card-img-top" alt="Producto 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Botines</h5>
+                                <p class="card-text">Descripción breve del botin .</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 7 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/zapa1.png" class="card-img-top" alt="Producto 7">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatilla</h5>
+                                <p class="card-text">Descripción breve de la zapatilla </p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 8 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="futbol">
+                        <div class="card">
+                            <img src="./imagenes/zapa2.jfif" class="card-img-top" alt="Producto 8">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatilla</h5>
+                                <p class="card-text">Descripción breve de la zapatilla </p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 9 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="tenis">
+                        <div class="card">
+                            <img src="./imagenes/zapa3.jfif" class="card-img-top" alt="Producto 9">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatilla</h5>
+                                <p class="card-text">Descripción breve de la zapatilla  </p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 10 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/zapa4.png" class="card-img-top" alt="Producto 10">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatilla</h5>
+                                <p class="card-text">Descripción breve de la zapatilla </p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 11 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="futbol">
+                        <div class="card">
+                            <img src="./imagenes/zapa5.jfif" class="card-img-top" alt="Producto 11">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatilla</h5>
+                                <p class="card-text">Descripción breve de la zapatilla </p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 12 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="tenis">
+                        <div class="card">
+                            <img src="./imagenes/zapa6.jfif" class="card-img-top" alt="Producto 12">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatilla</h5>
+                                <p class="card-text">Descripción breve de la zapatilla </p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 13 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/camiseta1.jfif" class="card-img-top" alt="Producto 13">
+                            <div class="card-body">
+                                <h5 class="card-title">Camiseta</h5>
+                                <p class="card-text">Descripción breve de la camiseta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 14 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="futbol">
+                        <div class="card">
+                            <img src="./imagenes/camiseta2.jfif" class="card-img-top" alt="Producto 14">
+                            <div class="card-body">
+                                <h5 class="card-title">Camiseta</h5>
+                                <p class="card-text">Descripción breve de la camiseta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 15 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="tenis">
+                        <div class="card">
+                            <img src="./imagenes/camiseta3.jfif" class="card-img-top" alt="Producto 15">
+                            <div class="card-body">
+                                <h5 class="card-title">Camiseta</h5>
+                                <p class="card-text">Descripción breve de la camiseta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 16 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/camiseta4.jfif" class="card-img-top" alt="Producto 16">
+                            <div class="card-body">
+                                <h5 class="card-title">Camiseta</h5>
+                                <p class="card-text">Descripción breve de la camiseta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 17 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="futbol">
+                        <div class="card">
+                            <img src="./imagenes/camiseta5.jfif" class="card-img-top" alt="Producto 17">
+                            <div class="card-body">
+                                <h5 class="card-title">Camiseta</h5>
+                                <p class="card-text">Descripción breve de la camiseta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 18 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="tenis">
+                        <div class="card">
+                            <img src="./imagenes/short1.jfif" class="card-img-top" alt="Producto 18">
+                            <div class="card-body">
+                                <h5 class="card-title">Short Deportivo</h5>
+                                <p class="card-text">Descripción breve del short.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 19 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/short2.jfif" class="card-img-top" alt="Producto 19">
+                            <div class="card-body">
+                                <h5 class="card-title">Short Deportivo</h5>
+                                <p class="card-text">Descripción breve del short.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 20 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="futbol">
+                        <div class="card">
+                            <img src="./imagenes/paleta.jfif" class="card-img-top" alt="Producto 20">
+                            <div class="card-body">
+                                <h5 class="card-title">Paleta</h5>
+                                <p class="card-text">Descripción breve de la paleta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 21 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="tenis">
+                        <div class="card">
+                            <img src="./imagenes/paleta2.jfif" class="card-img-top" alt="Producto 21">
+                            <div class="card-body">
+                                <h5 class="card-title">Paleta</h5>
+                                <p class="card-text">Descripción breve de la paleta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 22 -->
+                    <div class="col-md-3 mb-4 product-card" data-category="running">
+                        <div class="card">
+                            <img src="./imagenes/paleta3.jfif" class="card-img-top" alt="Producto 22">
+                            <div class="card-body">
+                                <h5 class="card-title">Paleta</h5>
+                                <p class="card-text">Descripción breve de la paleta.</p>
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                    </div>
+                </div>
+                    
+            </section>
+        </div>
+    </div>
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <!-- Redes Sociales -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-uppercase">Redes Sociales</h5>
+                    <div class="d-flex">
+                        <a href="https://www.instagram.com" target="_blank" class="text-white me-3">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/123456789" target="_blank" class="text-white me-3">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.google.com/maps" target="_blank" class="text-white">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Contacto -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-uppercase">Contacto</h5>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>correo@burshop.com<br>
+                        <i class="fas fa-phone-alt me-2"></i>+1 234 567 890<br>
+                        <i class="fas fa-map-marker-alt me-2"></i>Av. Principal #123, Ciudad, País
+                    </p>
+                </div>
+    
+                <!-- Links Útiles -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-uppercase">Links Útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="./productos.html" class="text-white text-decoration-none">Productos</a></li>
+                        <li><a href="./ofertas.html" class="text-white text-decoration-none">Ofertas</a></li>
+                        <li><a href="./contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <hr class="bg-light">
+    
+            <!-- Derechos Reservados -->
+            <div class="text-center py-3">
+                <p class="mb-0">&copy; 2024 Burshop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const toggleButton = document.querySelector('.barra__toggle');
+        const navBar = document.querySelector('.barra');
+    
+        toggleButton.addEventListener('click', () => {
+            navBar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
