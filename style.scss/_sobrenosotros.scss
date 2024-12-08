@@ -179,6 +179,10 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 }
+.body-sobrenosotros {
+    display: flex;
+    flex-direction: column;
+}
 .content{
     flex:1;
 }

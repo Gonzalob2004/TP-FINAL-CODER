@@ -1,0 +1,33 @@
+footer {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.body-carrito {
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    flex:1;
+}
+.cart-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.cart-item img {
+    max-width: 100px;
+    height: auto;
+}
+.total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

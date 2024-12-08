@@ -1,3 +1,7 @@
+$color-negro:rgb(0, 0, 0);
+$color-white:rgb(255, 255, 255);
+$color-negro-transparente:rgba(0,0,0,0.5);
+$color-white-transparente:rgba(255,255,255,0.5);
 $color-carousel-fondo: rgb(255, 255, 255);
 $color-azul: #007bff;
 .navbar {
@@ -155,6 +159,23 @@ $color-azul: #007bff;
         height: 100%;
         object-fit: cover;
         display: block;
+    }
+}
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .slider-wrapper {
+        height: 40vh; /* Reduce la altura en pantallas pequeñas */
+    }
+
+    .slider-frame {
+        width: 95%; /* Más espacio en dispositivos pequeños */
+    }
+}
+
+/* Media Queries para dispositivos muy pequeños (móviles) */
+@media (max-width: 576px) {
+    .slider-wrapper {
+        height: 30vh;
     }
 }
 
