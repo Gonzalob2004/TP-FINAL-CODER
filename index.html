@@ -8,30 +8,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Document</title>
 </head>
-<body class="index-body">
-    <nav class="barra">
-        <div class="barra__logo">LOGO</div>
-        <!-- Botón de menú hamburguesa para pantallas pequeñas -->
-        <button class="barra__toggle" aria-label="Abrir menú">
-            <span class="barra__toggle-line"></span>
-            <span class="barra__toggle-line"></span>
-            <span class="barra__toggle-line"></span>
+<body>
+    <div class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <!-- Logo -->
+        <div class="navbar-logo d-flex align-items-center">
+            <a class="navbar-brand" a href="#">burshop</a>    
+            <img class="logo-foto" src="./imagenes/logo (2).png" alt="logo" style="width: 40px; height: 40px; margin-left: 10px;">
+        </div>      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="barra__links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="./pages/ofertas.html">Ofertas</a></li>
-            <li><a href="#sucursales">Sucursales</a></li>
-            <li><a href="./pages/sobrenosotros.html">Sobre Nosotros</a></li>
-        </ul>
-        <!-- Barra de búsqueda -->
-        <div class="navbar-search d-flex align-items-center ms-3">
-            <input type="text" class="form-control" placeholder="Buscar productos...">
-            <button class="btn btn-outline-light ms-2" type="button">Buscar</button>
-            <a href="#">❤️</a>
-            <a href="#">🛒</a>
-            <a href="./pages/loggin.html">👤</a>
+
+        <!-- Enlaces de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/ofertas.html">Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/sobrenosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sucursales</a>
+                </li>
+            </ul>
+    
+            <!-- Barra de búsqueda -->
+            <div class="navbar-search d-flex align-items-center ms-3">
+                <input type="text" class="form-control" placeholder="Buscar productos...">
+                <button class="btn btn-outline-light ms-2" type="button">Buscar</button>
+                <div class="navbar-icons d-flex align-items-center ms-3">
+                    <a href="#" class="nav-icon" style="font-size: 30px; color: white; transition: transform 0.3s ease;" 
+                        onmouseover="this.style.transform='scale(1.5)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+                        ❤️
+                    </a>
+                    <a href="#" class="nav-icon" style="font-size: 30px; color: white; transition: transform 0.3s ease;" 
+                        onmouseover="this.style.transform='scale(1.5)'"     
+                        onmouseout="this.style.transform='scale(1)'">
+                            🛒
+                    </a>
+                    <a href="./pages/loggin.html" class="nav-icon" style="font-size: 30px; color: white; transition: transform 0.3s ease;" 
+                    onmouseover="this.style.transform='scale(1.5)'" 
+                    onmouseout="this.style.transform='scale(1)'">
+                        👤
+                    </a>            
+                </div>
+            </div>    
         </div>
-    </nav>
+    </div>
     <!--carrousel-->
     <div class="slider-wrapper">  
         <div class="slider-frame">
