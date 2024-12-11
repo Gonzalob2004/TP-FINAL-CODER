@@ -116,7 +116,7 @@
         </div>
 
         <!-- Mapa interactivo -->
-        <div class="mt-5">
+        <div class="mt-5"   >
             <h3 class="text-center mb-3">Ubicación de nuestras sucursales</h3>
             <div class="map-responsive">
                 <iframe
@@ -126,9 +126,7 @@
             </div>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
     <footer class="bg-dark text-white pt-4">
         <div class="container">
             <div class="row">
@@ -178,5 +176,37 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+            // Función para verificar si el elemento está visible en la pantalla
+        function isElementInView(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top >= 0 && rect.bottom <= window.innerHeight;
+        }
+
+        // Añadir la clase visible cuando el elemento esté en el viewport
+        function handleScroll() {
+            const cards = document.querySelectorAll('.card');
+            const map = document.querySelector('.map-responsive');
+
+            cards.forEach(card => {
+                if (isElementInView(card)) {
+                    card.classList.add('visible');
+                }
+            });
+
+            if (isElementInView(map)) {
+                map.classList.add('visible');
+            }
+        }
+
+        // Ejecutar la función cuando el usuario haga scroll
+        window.addEventListener('scroll', handleScroll);
+
+        // Ejecutar la función al cargar la página para aplicar animaciones a los elementos visibles
+        window.addEventListener('load', handleScroll);
+    </script>
 </body>
 </html>

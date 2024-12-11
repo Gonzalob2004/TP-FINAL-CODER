@@ -1,6 +1,37 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 @import url("https://usefontawesome.com/releases/v6.5.2/css/all.css");
+@media (min-width: 768px) {
+  .navbar-nav {
+    margin: 0 auto; /* Centrar el navbar */
+  }
+  .navbar-nav li {
+    margin: 0 10 px; /* Espaciado entre los links */
+  }
+  .navbar-search {
+    margin-left: auto; /* La barra de búsqueda se mantiene a la derecha */
+  }
+}
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .navbar-nav li {
+    margin: 10px 0;
+  }
+  .navbar .navbar-search {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar .navbar-search input {
+    margin-bottom: 10px;
+    width: 90%;
+  }
+  .navbar .navbar-search button {
+    width: 90%;
+  }
+}
 .navbar {
   color: rgb(255, 255, 255);
   padding: 10px 20px;
@@ -19,22 +50,22 @@
   font-size: 24px;
   font-weight: bold;
 }
-.navbar ul {
+.navbar .navbar-nav {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.navbar ul li {
-  margin: 0 70px;
+.navbar .navbar-nav li {
+  margin: 0 10px;
 }
-.navbar ul li a {
+.navbar .navbar-nav li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 18px;
 }
-.navbar ul li a:hover {
+.navbar .navbar-nav li a:hover {
   text-decoration: underline;
 }
 .navbar .navbar-search {
@@ -129,17 +160,19 @@
   padding: 0;
   width: 400%;
   margin: 0;
-  animation: slide 20s infinite alternate ease-in-out;
+  animation: slide 30s infinite alternate ease-in-out;
 }
-.slider-wrapper .slider-frame li {
+.slider-wrapper .slider-frame ul li {
   width: 100%;
   list-style: none;
+  transition: transform 0.5s ease;
 }
 .slider-wrapper .slider-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  animation: fadeIn 3s forwards;
 }
 @media (max-width: 768px) {
   .slider-wrapper {
@@ -152,6 +185,28 @@
   }
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .filter-category h6 {
   font-weight: bold;
   margin: 10px;
@@ -166,8 +221,53 @@
   object-fit: cover;
 }
 
+.product-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.product-card:nth-child(even) {
+  animation-delay: 0.3s;
+}
+
+.product-card:nth-child(odd) {
+  animation-delay: 0.6s;
+}
+
 .card {
   min-height: 350px;
+  width: 300px;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px); /* Se empieza desplazado hacia abajo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0); /* Se mueve a su posición original */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .offer-card {
@@ -404,11 +504,39 @@ html, body {
   flex: 1;
 }
 
+/* Añadir transición para una apertura y cierre suave */
+.accordion-collapse {
+  transition: max-height 0.3s ease-out, padding 0.2s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Para cuando el acordeón esté abierto */
+.accordion-collapse.show {
+  max-height: 1000px; /* Ajusta este valor según el contenido */
+  padding: 10px 20px; /* Ajusta el espaciado interno */
+}
+
+/* Si deseas animar también el cambio de color del botón */
+.accordion-button {
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0056b3; /* Cambia a color deseado cuando está abierto */
+  color: #fff;
+}
+
 footer {
   width: 100%;
   overflow: hidden;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 html, body {
