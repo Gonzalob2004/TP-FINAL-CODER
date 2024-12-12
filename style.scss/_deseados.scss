@@ -3,11 +3,9 @@
     font-size: 16px;
     border-radius: 5px;
 }
-
-/* Asegúrate de que las imágenes y otros elementos no desalineen los botones */
 .cart-item {
     display: flex;
-    align-items: center; /* Centra los elementos dentro del contenedor */
+    align-items: center; 
     justify-content: space-between;
     border-bottom: 1px solid #ddd;
     padding-bottom: 15px;
@@ -21,7 +19,7 @@
 }
 
 .cart-item .description {
-    flex: 1; /* Deja espacio para la descripción y otros elementos */
+    flex: 1; 
 }
 
 .cart-item .price {

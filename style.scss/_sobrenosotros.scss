@@ -186,20 +186,20 @@ html, body {
 .content{
     flex:1;
 }
-/* Añadir transición para una apertura y cierre suave */
+
 .accordion-collapse {
     transition: max-height 0.3s ease-out, padding 0.2s ease-out;
     max-height: 0;
     overflow: hidden;
 }
 
-/* Para cuando el acordeón esté abierto */
+
 .accordion-collapse.show {
-    max-height: 1000px; /* Ajusta este valor según el contenido */
-    padding: 10px 20px; /* Ajusta el espaciado interno */
+    max-height: 1000px; 
+    padding: 10px 20px; 
 }
 
-/* Si deseas animar también el cambio de color del botón */
+
 .accordion-button {
     transition: background-color 0.3s ease;
 }
@@ -209,6 +209,6 @@ html, body {
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #0056b3; /* Cambia a color deseado cuando está abierto */
+    background-color: #0056b3; 
     color: #fff;
 }

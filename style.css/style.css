@@ -3,13 +3,13 @@
 @import url("https://usefontawesome.com/releases/v6.5.2/css/all.css");
 @media (min-width: 768px) {
   .navbar-nav {
-    margin: 0 auto; /* Centrar el navbar */
+    margin: 0 auto;
   }
   .navbar-nav li {
-    margin: 0 10 px; /* Espaciado entre los links */
+    margin: 0 10px;
   }
   .navbar-search {
-    margin-left: auto; /* La barra de búsqueda se mantiene a la derecha */
+    margin-left: auto;
   }
 }
 @media (max-width: 768px) {
@@ -110,10 +110,10 @@
   color: #f8d7da;
 }
 .navbar .navbar-search .navbar-icons .nav-icon:focus {
-  outline: none; /* Elimina líneas azules de foco */
+  outline: none;
 }
 .navbar .navbar-search .navbar-icons .nav-icon:active {
-  transform: scale(1.2); /* Efecto más pequeño al hacer clic */
+  transform: scale(1.2);
 }
 .navbar .navbar-search .navbar-icons .ms-3 {
   margin-left: 10px;
@@ -132,81 +132,12 @@
   background-color: #007bff;
 }
 
-.slider-wrapper {
-  position: relative;
+.fotocarrusel {
   width: 100%;
-  height: 800px;
-  background-image: url("../imagenes/fond.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.slider-wrapper .slider-frame {
-  position: relative;
-  width: 80%;
-  height: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.slider-wrapper .slider-frame ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  margin: 0;
-  animation: slide 30s infinite alternate ease-in-out;
-}
-.slider-wrapper .slider-frame ul li {
-  width: 100%;
-  list-style: none;
-  transition: transform 0.5s ease;
-}
-.slider-wrapper .slider-frame img {
-  width: 100%;
-  height: 100%;
+  max-height: 400px;
   object-fit: cover;
-  display: block;
-  animation: fadeIn 3s forwards;
-}
-@media (max-width: 768px) {
-  .slider-wrapper {
-    height: 40vh; /* Altura para tablets */
-  }
-}
-@media (max-width: 576px) {
-  .slider-wrapper {
-    height: 30vh; /* Altura para móviles */
-  }
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-25%);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .filter-category h6 {
   font-weight: bold;
   margin: 10px;
@@ -238,7 +169,7 @@
   }
 }
 .product-card:nth-child(even) {
-  animation-delay: 0.3s;
+  animation-delay: 0.6s;
 }
 
 .product-card:nth-child(odd) {
@@ -253,13 +184,13 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  transform: translateY(50px); /* Se empieza desplazado hacia abajo */
+  transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .card.show {
   opacity: 1;
-  transform: translateY(0); /* Se mueve a su posición original */
+  transform: translateY(0);
 }
 
 .cards-container {
@@ -504,20 +435,17 @@ html, body {
   flex: 1;
 }
 
-/* Añadir transición para una apertura y cierre suave */
 .accordion-collapse {
   transition: max-height 0.3s ease-out, padding 0.2s ease-out;
   max-height: 0;
   overflow: hidden;
 }
 
-/* Para cuando el acordeón esté abierto */
 .accordion-collapse.show {
-  max-height: 1000px; /* Ajusta este valor según el contenido */
-  padding: 10px 20px; /* Ajusta el espaciado interno */
+  max-height: 1000px;
+  padding: 10px 20px;
 }
 
-/* Si deseas animar también el cambio de color del botón */
 .accordion-button {
   transition: background-color 0.3s ease;
 }
@@ -527,7 +455,7 @@ html, body {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #0056b3; /* Cambia a color deseado cuando está abierto */
+  background-color: #0056b3;
   color: #fff;
 }
 
@@ -578,10 +506,9 @@ html, body {
   border-radius: 5px;
 }
 
-/* Asegúrate de que las imágenes y otros elementos no desalineen los botones */
 .cart-item {
   display: flex;
-  align-items: center; /* Centra los elementos dentro del contenedor */
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
@@ -595,11 +522,75 @@ html, body {
 }
 
 .cart-item .description {
-  flex: 1; /* Deja espacio para la descripción y otros elementos */
+  flex: 1;
 }
 
 .cart-item .price {
   text-align: right;
+}
+
+.custom-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Texto de las tarjetas */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilo de los botones */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Estilo del mapa */
+.map-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.body-loggin {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-loggin {
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

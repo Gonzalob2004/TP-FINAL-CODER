@@ -28,23 +28,23 @@ $color-azul: #007bff;
 
 @mixin responsive-slider($height-small, $height-tiny) {
     @media (max-width: 768px) {
-        height: $height-small; /* Altura para tablets */
+        height: $height-small; 
     }
     @media (max-width: 576px) {
-        height: $height-tiny; /* Altura para móviles */
+        height: $height-tiny; 
     }
 }
 @media (min-width: 768px) {
     .navbar-nav {
-        margin: 0 auto; /* Centrar el navbar */
+        margin: 0 auto; 
     }
 
     .navbar-nav li {
-        margin: 0 10    px; /* Espaciado entre los links */
+        margin: 0 10px; 
     }
 
     .navbar-search {
-        margin-left: auto; /* La barra de búsqueda se mantiene a la derecha */
+        margin-left: auto; 
     }
 }
 @media (max-width: 768px) {
@@ -134,10 +134,10 @@ $color-azul: #007bff;
                     color: #f8d7da;
                 }
                 &:focus {
-                    outline: none; /* Elimina líneas azules de foco */
+                    outline: none; 
                 }
                 &:active {
-                    transform: scale(1.2); /* Efecto más pequeño al hacer clic */
+                    transform: scale(1.2);
                 }
             }
 
@@ -152,73 +152,12 @@ $color-azul: #007bff;
     @include boton-redondeado($color-negro, $color-white, $color-azul);
 }
 
-.slider-wrapper {
-    position: relative;
-    width: 100%;
-    height: 800px;
-    background-image: url('../imagenes/fond.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    @include flex-center();
-
-    .slider-frame {
-        position: relative;
-        width: 80%;
-        height: 80%;
-        margin: 0 auto;
-        overflow: hidden;
-        background-color: $color-white-transparente;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .slider-frame ul {
-        display: flex;
-        padding: 0;
-        width: 400%;
-        margin: 0;
-        animation: slide 30s infinite alternate ease-in-out;
-    }
-
-    .slider-frame ul li {
-        width: 100%;
-        list-style: none;
-        transition: transform 0.5s ease;
-    }
-
-    .slider-frame img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        animation: fadeIn 3s forwards;
-    }
-
-    @include responsive-slider(40vh, 30vh);
+.fotocarrusel{
+    width: 100%; 
+    max-height:400px; 
+    object-fit: cover;
 }
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-25%);
-    }
-    50% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}  
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+
 .filter-category {
     h6 {
         font-weight: bold;
@@ -251,7 +190,7 @@ $color-azul: #007bff;
     }
 }
 .product-card:nth-child(even) {
-        animation-delay: 0.3s;
+        animation-delay: 0.6s;
 }
 .product-card:nth-child(odd) {
     animation-delay: 0.6s;
@@ -264,12 +203,12 @@ $color-azul: #007bff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 0;
-    transform: translateY(50px); /* Se empieza desplazado hacia abajo */
+    transform: translateY(50px); 
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .card.show {
     opacity: 1;
-    transform: translateY(0); /* Se mueve a su posición original */
+    transform: translateY(0); 
 }
 .cards-container {
     display: flex;
@@ -313,3 +252,4 @@ $color-azul: #007bff;
     max-width: 100%;
     border-radius: 8px;
 }
+
