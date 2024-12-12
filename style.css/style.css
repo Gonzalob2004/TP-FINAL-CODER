@@ -149,7 +149,7 @@
 .card-img-top {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .product-card {
@@ -182,7 +182,6 @@
   padding: 20px;
   background: #f0f0f0;
   border-radius: 8px;
-  object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(50px);
@@ -192,6 +191,8 @@
 .card.show {
   opacity: 1;
   transform: translateY(0);
+  margin: auto;
+  margin-top: 2em;
 }
 
 .cards-container {
