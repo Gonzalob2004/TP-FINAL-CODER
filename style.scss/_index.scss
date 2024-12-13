@@ -1,3 +1,4 @@
+$color-pagina:rgba(16, 56, 97, 0.81);
 $color-negro:rgb(0, 0, 0);
 $color-white:rgb(255, 255, 255);
 $color-negro-transparente:rgba(0,0,0,0.5);
@@ -70,6 +71,9 @@ $color-azul: #007bff;
         }
     }
 }
+.container-nav{
+    max-width: 95%  !important;
+}
 .navbar {
     color: $color-carousel-fondo;
         padding: 10px 20px;
@@ -89,12 +93,12 @@ $color-azul: #007bff;
 
     .navbar-nav{
         list-style-type: none;
-        @include flex-center();
+        
 
         li {
             margin: 0 10px;
             a {
-                color: $color-white;
+                color: red;
                 text-decoration: none;
                 font-size: 18px;
 
@@ -126,7 +130,7 @@ $color-azul: #007bff;
                 font-size: 20px;
                 color: $color-white;
                 text-decoration: none;
-                cursor: pointer;
+                cursor: pointer;    
                 transition: transform 0.3s ease;
 
                 &:hover {
@@ -151,11 +155,14 @@ $color-azul: #007bff;
 .filter-btn {
     @include boton-redondeado($color-negro, $color-white, $color-azul);
 }
-
+.carousel{
+    margin-top: 3.5em;
+}
 .fotocarrusel{
     width: 100%; 
     max-height:400px; 
     object-fit: cover;
+    
 }
 
 .filter-category {
@@ -254,4 +261,8 @@ $color-azul: #007bff;
 .offer-img {
     max-width: 100%;
     border-radius: 8px;
+}
+header{
+    background-color: $color-pagina;
+    
 }
