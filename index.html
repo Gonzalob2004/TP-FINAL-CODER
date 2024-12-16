@@ -58,7 +58,7 @@
             </div>
         </div>
         
-        <!-- Header para dispositivos móviles -->
+        <!-- Header para celulares -->
         <nav class="navbar fixed-top d-md-none nav-color">
             <div class="container-fluid d-flex justify-content-between align-items-center">
                 <!-- Botón de menú -->
@@ -77,12 +77,12 @@
                 </a>
             </div>
 
-            <!-- Menú desplegable -->
+            <!-- Menú celular -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header d-flex justify-content-between align-items-center">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
                     <div class="d-flex align-items-center">
-                        <a href="./pages/favoritos.html" class="me-3">
+                        <a href="./pages/deseados.html" class="me-3">
                             <img src="./imagenes/favorito.png" alt="Favoritos" style="width: 20px;">
                         </a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -564,19 +564,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </script>
-    <script>// Crear el Intersection Observer para detectar cuando las tarjetas son visibles en el viewport
+    <script>
         const cards = document.querySelectorAll('.card');
         
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-              observer.unobserve(entry.target); // Deja de observar la tarjeta una vez que ha aparecido
+                observer.unobserve(entry.target);
             }
             });
-        }, { threshold: 0.5 }); // El 50% de la tarjeta debe estar visible para que se active
+        }, { threshold: 0.5 }); 
         
-        // Observamos todas las tarjetas
         cards.forEach(card => {
             observer.observe(card);
         });
